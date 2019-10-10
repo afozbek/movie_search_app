@@ -6,7 +6,7 @@ $card-light-back: $white;
 
   padding: $lg;
 
-  background: $card-back;
+  background: $card-light-back;
 
   @include flex(column, wrap, flex-start);
 
@@ -32,23 +32,6 @@ $card-light-back: $white;
 
     &.-justify {
       text-align: justify;
-    }
-  }
-
-  &.-light {
-    padding: $lg;
-    margin: 0;
-
-    background: $card-light-back;
-
-    @include media-small-tablet {
-      max-width: 438px;
-    }
-  }
-
-  &.-ml-auto {
-    @include media-tablet {
-      margin-left: auto;
     }
   }
 }
