@@ -1,29 +1,26 @@
-$card-back: $light-grey;
+$card-back: $alto;
 $card-light-back: $white;
 
 .m-card {
   max-width: 390px;
 
   padding: $lg;
-  padding-right: $xxl;
-  margin: auto;
-  margin-bottom: $lg;
 
-  background: $card-back;
+  background: $card-light-back;
 
-  @include media-small-tablet {
-    max-width: 390px;
-
-    margin: 0;
-    margin-left: $md;
-  }
-  @include flex(flex, wrap, flex-start);
+  @include flex(column, wrap, flex-start);
 
   &__header {
     margin-bottom: $lg;
 
     line-height: 32px;
     letter-spacing: .6px;
+  }
+
+  &__image {
+    width: 100%;
+
+    margin-bottom: $lg;
   }
 
   &__paragraph {
@@ -35,23 +32,6 @@ $card-light-back: $white;
 
     &.-justify {
       text-align: justify;
-    }
-  }
-
-  &.-light {
-    padding: $lg 0;
-    margin: 0;
-
-    background: $card-light-back;
-
-    @include media-small-tablet {
-      max-width: 438px;
-    }
-  }
-
-  &.-ml-auto {
-    @include media-tablet {
-      margin-left: auto;
     }
   }
 }
