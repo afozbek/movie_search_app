@@ -1,15 +1,5 @@
 <template>
-  <div>
-    <div class="m-search">
-      <input
-        class="m-search__input"
-        v-model="title"
-        type="text"
-        placeholder="Search Any Movie or Series"
-      />
-      <button class="m-search__button" @click="getMovie">Find Your Movie</button>
-    </div>
-
+  <div class="m-container">
     <app-card v-if="searched" :movie="movie"></app-card>
   </div>
 </template>
@@ -47,21 +37,5 @@ export default {
 
 <style lang="scss">
 @import "./scss/main.scss";
-
-.m-search {
-  @include flex(column, wrap, center);
-
-  &__input {
-    width: 90%;
-    height: 50px;
-
-    margin: 0 auto;
-    border: 3px solid red;
-
-    &::placeholder {
-      text-align: center;
-    }
-  }
-}
 
 </style>
